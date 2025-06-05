@@ -6,27 +6,6 @@ import 'package:todo_app/data/task_group_enum.dart';
 import 'package:todo_app/screens/task/task_group_item.dart';
 import 'package:todo_app/screens/task/task_item.dart';
 
-final dummiesToday = [
-  Task(
-    title: 'Task 1',
-    date: DateTime.now(),
-    isDone: false,
-    taskGroup: TaskGroup.today,
-  ),
-  Task(
-    title: 'Task 2',
-    date: DateTime.now(),
-    isDone: false,
-    taskGroup: TaskGroup.tomorrow,
-  ),
-  Task(
-    title: 'Task 3',
-    date: DateTime.now(),
-    isDone: false,
-    taskGroup: TaskGroup.today,
-  ),
-];
-
 class Tasks extends StatefulWidget {
   const Tasks({super.key});
 
@@ -37,13 +16,6 @@ class Tasks extends StatefulWidget {
 class _TasksState extends State<Tasks> {
   @override
   Widget build(BuildContext context) {
-    final todayTasks = dummiesToday
-        .where((task) => task.taskGroup == TaskGroup.today)
-        .toList();
-    final tomorrowTasks = dummiesToday
-        .where((task) => task.taskGroup == TaskGroup.tomorrow)
-        .toList();
-
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),

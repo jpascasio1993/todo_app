@@ -20,11 +20,7 @@ class TaskGroupItem extends StatefulWidget {
 }
 
 class _TaskGroupItemState extends State<TaskGroupItem> {
-  void updateItem(int index, bool isDone) {
-    // setState(() {
-    //   widget.tasks[index].isDone = isDone;
-    // });
-  }
+  void updateItem(int index, bool isDone) {}
 
   @override
   Widget build(BuildContext context) {
