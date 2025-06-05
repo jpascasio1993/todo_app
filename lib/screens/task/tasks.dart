@@ -24,7 +24,7 @@ class _TasksState extends State<Tasks> {
         children: [
           SizedBox(height: 10),
           Expanded(
-            child: SizedBox.expand(
+            child: SingleChildScrollView(
               child: Column(
                 children: [
                   Builder(
@@ -96,9 +96,18 @@ class BottomBar extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.home)),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.person)),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.home, color: Colors.white),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.search, color: Colors.white),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.person, color: Colors.white),
+            ),
           ],
         ),
       ),
