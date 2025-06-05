@@ -1,0 +1,1 @@
+enum TaskGroup { today, tomorrow }
